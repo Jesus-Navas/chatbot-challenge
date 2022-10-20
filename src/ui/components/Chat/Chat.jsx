@@ -1,7 +1,8 @@
 import { useRef, useState, useEffect } from 'react'
 import { Box, ScaleFade, Input, FormControl, Button, Flex } from '@chakra-ui/react'
-import ChatBubble from './components/Bubble'
+import Bubble from './components/Bubble'
 import { botMessages } from '../../../mocks/bot.mock'
+import Carousel from '../Carousel/Carousel'
 
 const Chat = () => {
 
@@ -19,11 +20,40 @@ const Chat = () => {
 
     function handleInput(e) {
         e.preventDefault()
-        messageRef.current.value.length > 0 && setChat([...chat, { text: messageRef.current.value, isRobot: false }])
+        messageRef.current.value.length > 0 && setChat([...chat, { text: messageRef.current.value, isRobot: false, isCarousel: false }])
     }
 
     function handleClick() {
 
+        setChat([...chat, {
+
+            isRobot: true,
+            isCarousel: true,
+            options: [
+                {
+                    text: "hola",
+                    img: "/images/foto-perfil.jpeg",
+                    title: "Desarrolador Junior",
+                    text: "holaaaaaaaaaaaaaaaaaa",
+                    href: "https://github.com/Jesus-Navas"
+                },
+                {
+                    text: "hola",
+                    img: "/images/foto-perfil.jpeg",
+                    title: "Desarrolador Junior",
+                    text: "adiosssssssssss",
+                    href: "https://github.com/Jesus-Navas"
+                },
+                {
+                    text: "hola",
+                    img: "/images/foto-perfil.jpeg",
+                    title: "Desarrolador Junior",
+                    text: "jejejejejejeje",
+                    href: "https://github.com/Jesus-Navas"
+                },
+            ]
+        }
+        ])
     }
 
     return (
@@ -38,14 +68,20 @@ const Chat = () => {
             border={"1px solid RGBA(255, 255, 255, 0.48)"}
         >
             {
-                chat.map(({ text, isRobot, isCarousel}, idx) => (
-                    <ScaleFade key={idx} initialScale={0.9} in={true}>
-                        <ChatBubble text={text} isRobot={isRobot} />
-                    </ScaleFade>
+                chat.map((elem, idx) => (
+                    elem.isCarousel == false ?
+                        <ScaleFade key={idx} initialScale={0.9} in={true}>
+                            <Bubble text={elem.text} isRobot={elem.isRobot} />
+                        </ScaleFade>
+                        :
+                        <Carousel>
+                            {elem.options}
+                        </Carousel>
                 ))
             }
             <FormControl as="form" onSubmit={handleInput}>
-                {chat[chat.length - 1].hasOwnProperty("options") &&
+                {chat[chat.length - 1].isCarousel == false &&
+
                     chat[chat.length - 1].options?.map((elem, idx) => (
                         <Button onClick={handleClick} key={idx}>{elem.button}</Button>
                     ))

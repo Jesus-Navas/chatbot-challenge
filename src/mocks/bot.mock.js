@@ -1,3 +1,4 @@
+
 export const botMessages = [
 
     {
@@ -27,50 +28,55 @@ export const botMessages = [
         ]
     },
     {
-        text: "Estas son nuestras vacantes",
-        isRobot: true,
-        isCarousel: true,
+        text: "",
+        isRobot:true,
+        isCarousel:true,
         options: [
             {
-                img: "Vacante 1",
-                description: "descripcion 1",
-                button: "Detalles"
+                text: "hola",
+                img: "/images/foto-perfil.jpeg",
+                title: "Desarrolador Junior",
+                text: "holaaaaaaaaaaaaaaaaaa",
+                href: "https://github.com/Jesus-Navas"
             },
             {
-                img: "Vacante 2",
-                description: "descripcion 2",
-                button: "Detalles"
+                text: "hola",
+                img: "/images/foto-perfil.jpeg",
+                title: "Desarrolador Junior",
+                text: "adiosssssssssss",
+                href: "https://github.com/Jesus-Navas"
             },
             {
-                img: "Vacante 3",
-                description: "descripcion 3",
-                button: "Detalles"
+                text: "hola",
+                img: "/images/foto-perfil.jpeg",
+                title: "Desarrolador Junior",
+                text: "jejejejejejeje",
+                href: "https://github.com/Jesus-Navas"
             },
         ]
     }
-    // {
-    //     text: "Estos son nuestros productos",
-    //     isRobot: true,
-    //     isCarousel: true,
-    //     options: [
-    //         {
-    //             img: "Producto 1",
-    //             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id quam nibh. Aliquam ac elit et odio efficitur ullamcorper quis a ex.",
-    //             button: "Detalles"
-    //         },
-    //         {
-    //             img: "Producto 2",
-    //             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id quam nibh. Aliquam ac elit et odio efficitur ullamcorper quis a ex.",
-    //             button: "Detalles"
-    //         },
-    //         {
-    //             img: "Producto 3",
-    //             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id quam nibh. Aliquam ac elit et odio efficitur ullamcorper quis a ex.",
-    //             button: "Detalles"
-    //         },
-    //     ]
-    // },
 ]
+
 export const botCarousel = [
-    
+    {
+        text: "hola",
+        img: "/images/foto-perfil.jpeg",
+        title: "Desarrolador Junior",
+        text: "holaaaaaaaaaaaaaaaaaa",
+        href: "https://github.com/Jesus-Navas"
+    },
+    {
+        text: "hola",
+        img: "/images/foto-perfil.jpeg",
+        title: "Desarrolador Junior",
+        text: "adiosssssssssss",
+        href: "https://github.com/Jesus-Navas"
+    },
+    {
+        text: "hola",
+        img: "/images/foto-perfil.jpeg",
+        title: "Desarrolador Junior",
+        text: "jejejejejejeje",
+        href: "https://github.com/Jesus-Navas"
+    },
 ]

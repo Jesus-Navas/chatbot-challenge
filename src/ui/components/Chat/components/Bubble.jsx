@@ -1,6 +1,6 @@
-import { Box, Text, Flex } from '@chakra-ui/react'
+import { Text, Flex } from '@chakra-ui/react'
 
-const ChatBubble = ({ text, isRobot, hasOptions }) => {
+const Bubble = ({ text, isRobot}) => {
 
     return (
         <>
@@ -9,6 +9,7 @@ const ChatBubble = ({ text, isRobot, hasOptions }) => {
                 <Flex
                     flexDirection={"column"}
                     my={"10px"}
+                    
                 >
                     <Text
                         as={"span"}
@@ -27,6 +28,7 @@ const ChatBubble = ({ text, isRobot, hasOptions }) => {
                 <Flex
                     flexDirection={"column"}
                     my={"10px"}
+                    
                 >
                     <Text
                         as={"span"}
@@ -43,9 +45,7 @@ const ChatBubble = ({ text, isRobot, hasOptions }) => {
                 </Flex>
             }
         </>
-
-
     )
 }
 
-export default ChatBubble
+export default Bubble
