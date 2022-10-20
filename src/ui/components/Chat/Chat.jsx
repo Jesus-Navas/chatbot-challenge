@@ -4,33 +4,25 @@ import ChatBubble from './components/Bubble'
 import { botMessages } from '../../../mocks/bot.mock'
 
 const Chat = () => {
+
     const [chat, setChat] = useState([botMessages[0]])
-    const [hasOptions, setHasOptions] = useState(false)
     const messageRef = useRef()
 
 
     useEffect(() => {
-
         chat[chat.length - 1].isRobot == false &&
-
             setTimeout(() => {
-                setChat([...chat, botMessages[3]])
-            }, 1000)
-
-    }, [chat])
-
-    useEffect(() => {
-
-        chat[chat.length - 1].isRobot == true && chat[chat.length - 1].type == "options" ? setHasOptions(true) : setHasOptions(false)
-
+                setChat([...chat, botMessages[1]])
+            }, 800)
     }, [chat])
 
 
-    function onSubmit(e) {
-
+    function handleInput(e) {
         e.preventDefault()
-
         messageRef.current.value.length > 0 && setChat([...chat, { text: messageRef.current.value, isRobot: false }])
+    }
+
+    function handleClick() {
 
     }
 
@@ -46,16 +38,16 @@ const Chat = () => {
             border={"1px solid RGBA(255, 255, 255, 0.48)"}
         >
             {
-                chat.map(({ text, isRobot }, idx) => (
-                    <ScaleFade key={idx} initialScale={0.5} in={true}>
+                chat.map(({ text, isRobot, isCarousel}, idx) => (
+                    <ScaleFade key={idx} initialScale={0.9} in={true}>
                         <ChatBubble text={text} isRobot={isRobot} />
                     </ScaleFade>
                 ))
             }
-            <FormControl as="form" onSubmit={onSubmit}>
-                {hasOptions &&
+            <FormControl as="form" onSubmit={handleInput}>
+                {chat[chat.length - 1].hasOwnProperty("options") &&
                     chat[chat.length - 1].options?.map((elem, idx) => (
-                        <Button key={idx}>{elem.button}</Button>
+                        <Button onClick={handleClick} key={idx}>{elem.button}</Button>
                     ))
                 }
                 <Flex>

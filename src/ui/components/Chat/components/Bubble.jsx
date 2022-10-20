@@ -1,6 +1,6 @@
 import { Box, Text, Flex } from '@chakra-ui/react'
 
-const ChatBubble = ({ text, isRobot }) => {
+const ChatBubble = ({ text, isRobot, hasOptions }) => {
 
     return (
         <>
