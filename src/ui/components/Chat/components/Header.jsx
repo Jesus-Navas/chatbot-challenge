@@ -1,8 +1,9 @@
-import { Flex, Box, Text, Avatar, AvatarBadge } from "@chakra-ui/react"
+import { Flex, Text, Avatar, AvatarBadge } from "@chakra-ui/react"
 import { CloseIcon } from '@chakra-ui/icons'
 
 
 const Header = ({img, isOnline, name, description}) => {
+    //TODO: MODAL
     return (
         <Flex
             width={"100%"}
@@ -46,7 +47,7 @@ const Header = ({img, isOnline, name, description}) => {
                     </Text>
                 </Flex>
             </Flex>
-            <CloseIcon boxSize={"0.7rem"} />
+            <CloseIcon boxSize={"0.7rem"} /> {/* MODAL TRIGGER */}
         </Flex>
     )
 }

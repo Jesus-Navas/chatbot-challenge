@@ -1,9 +1,8 @@
 import { useRef, useState, useEffect } from 'react'
-import { Box } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import Header from './components/Header'
 import MessageInput from './components/MessageInput'
 import Conversation from './components/Conversation'
-import BasicModal from '../BasicModal/BasicModal'
 import { botMessages } from '../../../mocks/bot.mock'
 
 const Chat = () => {
@@ -33,19 +32,22 @@ const Chat = () => {
     }
 
     return (
-        <Box
+        <Flex
             position={"relative"}
+            flexDirection={"column"}
             width={"50%"}
-            height={"50vh"}
             as='section'
             bgColor={"#F7FAFC"}
             border={"1px solid #E2E8F0"}
         >
-            <Header isOnline />
-            <Conversation messageList={chat}/>
-            <MessageInput messageRef={messageRef} handleInput={handleInput} />
-            <BasicModal/>
-        </Box>
+            <Flex
+                flexDirection={"column"}
+            >
+                <Header isOnline />
+                <Conversation messageList={chat}/>
+                <MessageInput messageRef={messageRef} handleInput={handleInput} />
+            </Flex>
+        </Flex>
     )
 }
 

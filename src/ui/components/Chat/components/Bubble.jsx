@@ -1,12 +1,28 @@
-import { Text, Flex, Avatar } from '@chakra-ui/react'
+import { Text, Flex, Button, Avatar } from '@chakra-ui/react'
 
-const Bubble = ({ text, isRobot }) => {
+const Bubble = ({ text, isRobot, isOption }) => {
 
     return (
         <>
-            {isRobot ? (
-
-
+            {isRobot ?
+                isOption ?
+                    <Flex
+                        columnGap={"4px"}
+                        my={"1%"}
+                        mx={"2%"}
+                    >
+                        <Button
+                            size={"xs"}
+                            colorScheme='blue'
+                            variant='outline'
+                            borderRadius={"16px"}
+                            width={"100%"}
+                            p={"8px"}
+                        >
+                            {text}
+                        </Button>
+                    </Flex>
+                    :
                     <Flex
                         columnGap={"4px"}
                         my={"1%"}
@@ -36,13 +52,15 @@ const Bubble = ({ text, isRobot }) => {
                             {text}
                         </Text>
                     </Flex>
-            
-            ) :
+
+
+
+
+                :
                 <Flex
                     flexDirection={"column"}
                     my={"1%"}
                     mx={"2%"}
-
                 >
                     <Text
                         as={"span"}

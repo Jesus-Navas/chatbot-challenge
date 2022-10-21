@@ -19,7 +19,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
     }
 
     return (
-        <FormControl as="form" onSubmit={handleInput} onChange={handleOnchange} px={"2%"}>
+        <FormControl as="form" onSubmit={handleInput} onChange={handleOnchange} p={"2%"}>
             <InputGroup size='md'>
                 <Input
                     ref={messageRef}
