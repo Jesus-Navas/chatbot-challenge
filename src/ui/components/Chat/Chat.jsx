@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { Box, ScaleFade, Input, FormControl, Button, Flex } from '@chakra-ui/react'
 import Bubble from './components/Bubble'
-import { botMessages } from '../../../mocks/bot.mock'
+import { botMessages, botCarousel } from '../../../mocks/bot.mock'
 import Carousel from '../Carousel/Carousel'
 
 const Chat = () => {
@@ -19,41 +19,14 @@ const Chat = () => {
 
 
     function handleInput(e) {
+
         e.preventDefault()
         messageRef.current.value.length > 0 && setChat([...chat, { text: messageRef.current.value, isRobot: false, isCarousel: false }])
     }
 
     function handleClick() {
 
-        setChat([...chat, {
-
-            isRobot: true,
-            isCarousel: true,
-            options: [
-                {
-                    text: "hola",
-                    img: "/images/foto-perfil.jpeg",
-                    title: "Desarrolador Junior",
-                    text: "holaaaaaaaaaaaaaaaaaa",
-                    href: "https://github.com/Jesus-Navas"
-                },
-                {
-                    text: "hola",
-                    img: "/images/foto-perfil.jpeg",
-                    title: "Desarrolador Junior",
-                    text: "adiosssssssssss",
-                    href: "https://github.com/Jesus-Navas"
-                },
-                {
-                    text: "hola",
-                    img: "/images/foto-perfil.jpeg",
-                    title: "Desarrolador Junior",
-                    text: "jejejejejejeje",
-                    href: "https://github.com/Jesus-Navas"
-                },
-            ]
-        }
-        ])
+        setChat([...chat, botMessages[2]])
     }
 
     return (
@@ -74,7 +47,7 @@ const Chat = () => {
                             <Bubble text={elem.text} isRobot={elem.isRobot} />
                         </ScaleFade>
                         :
-                        <Carousel>
+                        <Carousel key={idx}>
                             {elem.options}
                         </Carousel>
                 ))

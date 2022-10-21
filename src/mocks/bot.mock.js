@@ -29,8 +29,8 @@ export const botMessages = [
     },
     {
         text: "",
-        isRobot:true,
-        isCarousel:true,
+        isRobot: true,
+        isCarousel: true,
         options: [
             {
                 text: "hola",
@@ -57,26 +57,3 @@ export const botMessages = [
     }
 ]
 
-export const botCarousel = [
-    {
-        text: "hola",
-        img: "/images/foto-perfil.jpeg",
-        title: "Desarrolador Junior",
-        text: "holaaaaaaaaaaaaaaaaaa",
-        href: "https://github.com/Jesus-Navas"
-    },
-    {
-        text: "hola",
-        img: "/images/foto-perfil.jpeg",
-        title: "Desarrolador Junior",
-        text: "adiosssssssssss",
-        href: "https://github.com/Jesus-Navas"
-    },
-    {
-        text: "hola",
-        img: "/images/foto-perfil.jpeg",
-        title: "Desarrolador Junior",
-        text: "jejejejejejeje",
-        href: "https://github.com/Jesus-Navas"
-    },
-]

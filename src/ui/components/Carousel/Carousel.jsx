@@ -4,10 +4,7 @@ import styled from "@emotion/styled"
 import CarouselItem from "./components/CarouselItem"
 
 
-const Carousel = ({
-    children,
-    style,
-}) => {
+const Carousel = ({ children }) => {
 
     const [sliderRef] = useKeenSlider()
 
@@ -16,10 +13,10 @@ const Carousel = ({
             ref={sliderRef}
             className="keen-slider"
         >
-            {children.map(({text, img, title, href }, idx) => {
-                
+            {children.map(({ text, img, title, href }, idx) => {
+
                 return (
-                    <CarouselItem key={idx} text={text} img={img} title={title} href={href} />
+                    <CarouselItem key={idx + "carousel"} text={text} img={img} title={title} href={href} />
                 )
             })
             }
