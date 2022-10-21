@@ -1,44 +1,61 @@
-import { Text, Flex } from '@chakra-ui/react'
+import { Text, Flex, Avatar } from '@chakra-ui/react'
 
-const Bubble = ({ text, isRobot}) => {
+const Bubble = ({ text, isRobot }) => {
 
     return (
         <>
             {isRobot ? (
 
-                <Flex
-                    flexDirection={"column"}
-                    my={"10px"}
-                    
-                >
-                    <Text
-                        as={"span"}
-                        p={"8px"}
-                        variant={"robot"}
-                        background={"#4299E1"}
-                        color={"white"}
-                        borderRadius={"8px"}
-                        alignSelf={"start"}
-                        maxWidth={"45%"}
+
+                    <Flex
+                        columnGap={"4px"}
+                        my={"1%"}
+                        mx={"2%"}
                     >
-                        {text}
-                    </Text>
-                </Flex>
+                        <Avatar
+                            name="Hr Bot"
+                            src="images/bot.jpeg"
+                            size='xs'
+                            alignSelf={"end"}
+                            pb={"6px"}
+                        />
+                        <Text
+                            as={"span"}
+                            py={"3px"}
+                            px={"10px"}
+                            variant={"robot"}
+                            background={"transparent"}
+                            color={"RGBA(0, 0, 0, 0.80)"}
+                            borderRadius={"16px"}
+                            alignSelf={"start"}
+                            maxWidth={"45%"}
+                            border={"1px solid #BEE3F8"}
+                            fontWeight={"200"}
+                            fontSize={"14px"}
+                        >
+                            {text}
+                        </Text>
+                    </Flex>
+            
             ) :
                 <Flex
                     flexDirection={"column"}
-                    my={"10px"}
-                    
+                    my={"1%"}
+                    mx={"2%"}
+
                 >
                     <Text
                         as={"span"}
-                        p={"8px"}
+                        py={"3px"}
+                        px={"10px"}
                         variant={"user"}
-                        background={"#9AE6B4"}
-                        color={"white"}
-                        borderRadius={"8px"}
+                        background={"#BEE3F8"}
+                        color={"RGBA(0, 0, 0, 0.80)"}
+                        borderRadius={"16px"}
                         alignSelf={"end"}
-                        maxWidth={"45%"}
+                        maxWidth={"40%"}
+                        fontWeight={"200"}
+                        fontSize={"14px"}
                     >
                         {text}
                     </Text>

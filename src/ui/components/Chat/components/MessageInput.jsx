@@ -1,25 +1,52 @@
-import { Input, Button } from "@chakra-ui/react"
-import { useRef } from "react"
-import { conversation } from "../../../../mocks/bot.mock"
+import { useState, useEffect } from "react"
+import { FormControl, InputGroup, Input, ScaleFade, InputRightElement, Text } from "@chakra-ui/react"
 
 
-const MessageInput = () => {
-    const messageRef = useRef()
-    
-    function onSubmit(e) {
+const MessageInput = ({ handleInput, messageRef }) => {
 
-        e.preventDefault()
+    const [showButton, setShowButton] = useState(false)
 
-        conversation.push({ text: messageRef.current.value, isRobot: true })
-        console.log(conversation)
+
+    useEffect(() => {
+
+        setShowButton(false)
+
+    }, [handleInput])
+
+
+    const handleOnchange = (e) => {
+        e.target.value.length > 0 ? setShowButton(true) : setShowButton(false)
     }
 
     return (
-        <form onSubmit={onSubmit}>
-            <Input ref={messageRef} placeholder='Escribe un mensaje...' />
-            <Button type="submit">Send</Button>
-        </form>
+        <FormControl as="form" onSubmit={handleInput} onChange={handleOnchange} px={"2%"}>
+            <InputGroup size='md'>
+                <Input
+                    ref={messageRef}
+                    placeholder='Escribe un mensaje...'
+                    pr='4.5rem'
+                />
+                {showButton &&
+                    <ScaleFade initialScale={0.9} in={true}>
+                        <InputRightElement>
+                            <Text
+                                as={"button"}
+                                type="submit"
+                                bgColor={"transparent"}
+                                mr={"70%"}
+                                fontWeight={"600"}
+                                color={"#3182CE"}
+                            >
+                                Enviar
+                            </Text>
+                        </InputRightElement>
+                    </ScaleFade>
+                }
+            </InputGroup>
+
+        </FormControl>
     )
 }
 
 export default MessageInput
+

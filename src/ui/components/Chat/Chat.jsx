@@ -1,8 +1,10 @@
 import { useRef, useState, useEffect } from 'react'
-import { Box, ScaleFade, Input, FormControl, Button, Flex } from '@chakra-ui/react'
-import Bubble from './components/Bubble'
-import { botMessages, botCarousel } from '../../../mocks/bot.mock'
-import Carousel from '../Carousel/Carousel'
+import { Box } from '@chakra-ui/react'
+import Header from './components/Header'
+import MessageInput from './components/MessageInput'
+import Conversation from './components/Conversation'
+import BasicModal from '../BasicModal/BasicModal'
+import { botMessages } from '../../../mocks/bot.mock'
 
 const Chat = () => {
 
@@ -22,6 +24,7 @@ const Chat = () => {
 
         e.preventDefault()
         messageRef.current.value.length > 0 && setChat([...chat, { text: messageRef.current.value, isRobot: false, isCarousel: false }])
+        e.target.reset()
     }
 
     function handleClick() {
@@ -36,34 +39,12 @@ const Chat = () => {
             height={"50vh"}
             as='section'
             bgColor={"#F7FAFC"}
-            backdropFilter={"filter: blur(2px)"}
-            borderRadius={"10px"}
-            border={"1px solid RGBA(255, 255, 255, 0.48)"}
+            border={"1px solid #E2E8F0"}
         >
-            {
-                chat.map((elem, idx) => (
-                    elem.isCarousel == false ?
-                        <ScaleFade key={idx} initialScale={0.9} in={true}>
-                            <Bubble text={elem.text} isRobot={elem.isRobot} />
-                        </ScaleFade>
-                        :
-                        <Carousel key={idx}>
-                            {elem.options}
-                        </Carousel>
-                ))
-            }
-            <FormControl as="form" onSubmit={handleInput}>
-                {chat[chat.length - 1].isCarousel == false &&
-
-                    chat[chat.length - 1].options?.map((elem, idx) => (
-                        <Button onClick={handleClick} key={idx}>{elem.button}</Button>
-                    ))
-                }
-                <Flex>
-                    <Input ref={messageRef} placeholder='Escribe un mensaje...' />
-                    <Button type="submit">Send</Button>
-                </Flex>
-            </FormControl>
+            <Header isOnline />
+            <Conversation messageList={chat}/>
+            <MessageInput messageRef={messageRef} handleInput={handleInput} />
+            <BasicModal/>
         </Box>
     )
 }

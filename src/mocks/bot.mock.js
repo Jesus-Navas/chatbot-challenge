@@ -2,7 +2,7 @@
 export const botMessages = [
 
     {
-        text: "Hola! En que puedo ayudarte? Selecciona una de las opciones",
+        text: "Bienvenido soy el asistente virtual de hr bot factory ¿En que puedo ayudarte?",
         isRobot: true,
         isCarousel: false,
         options: [
