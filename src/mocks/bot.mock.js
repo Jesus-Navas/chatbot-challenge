@@ -1,33 +1,17 @@
-
 export const botMessages = [
-
     {
         text: "Bienvenido/a. Soy el asistente virtual de hr bot factory ¿En qué puedo ayudarte?",
         isRobot: true,
         isCarousel: false,
-        isOption:true,
-        options: [
-            {
-                button: "Vacantes"
-            },
-            {
-                button: "Productos"
-            },
-        ]
+        isOption: true,
+        options: ["Vacantes", "Productos"]
     },
     {
-        text: "A mi no me mires, solo soy un robot jiji. Selecciona una de las opciones",
+        text: "A mi no me mires, solo soy un robot jiji. Selecciona una de las opciones:",
         isRobot: true,
         isCarousel: false,
         isOption: true,
-        options: [
-            {
-                button: "Vacantes"
-            },
-            {
-                button: "Productos"
-            },
-        ]
+        options: ["Vacantes", "Productos"]
     },
     {
         text: "",
@@ -36,24 +20,21 @@ export const botMessages = [
         isOption: false,
         options: [
             {
-                text: "hola",
                 img: "/images/foto-perfil.jpeg",
-                title: "Desarrolador Junior",
-                text: "holaaaaaaaaaaaaaaaaaa",
+                title: "Desarrollador Senior",
+                text: "¿Quieres formar parte de una start up? ¿Estás deseando aprender y crecer en un entorno joven y flexible? Suspendisse eu neque porta diam eleifend.",
                 href: "https://github.com/Jesus-Navas"
             },
             {
-                text: "hola",
                 img: "/images/foto-perfil.jpeg",
-                title: "Desarrolador Junior",
-                text: "adiosssssssssss",
+                title: "Desarrollador Junior",
+                text: "¿Quieres aprender y te gusta la tecnología y la innovación? Integer sed imperdiet erat, ac lobortis mi. Aenean ac imperdiet dui. In non justo enim.",
                 href: "https://github.com/Jesus-Navas"
             },
             {
-                text: "hola",
                 img: "/images/foto-perfil.jpeg",
-                title: "Desarrolador Junior",
-                text: "jejejejejejeje",
+                title: "Product Specialist",
+                text: "Ut porta erat vel lacus tempor pretium. Vivamus ac dignissim mauris. Phasellus gravida id tortor vitae tincidunt. Ut efficitur facilisis.",
                 href: "https://github.com/Jesus-Navas"
             },
         ]

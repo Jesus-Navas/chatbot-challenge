@@ -2,18 +2,21 @@ import { Flex, Text, Avatar, AvatarBadge } from "@chakra-ui/react"
 import { CloseIcon } from '@chakra-ui/icons'
 
 
-const Header = ({img, isOnline, name, description}) => {
+const Header = ({ img, isOnline, name, description }) => {
     //TODO: MODAL
     return (
         <Flex
+            position={"fixed"}
+            zIndex={"2"}
+            top={"0"}
             width={"100%"}
             as={"header"}
             alignItems={"center"}
             justifyContent={"space-between"}
             pl={"6px"}
             pr={"14px"}
-            py={"4px"}
-            bgColor={"#EDF2F7"}
+            py={"6px"}
+            bgColor={"#EBF8FF"}
         >
             <Flex
                 alignItems={"center"}
@@ -24,7 +27,7 @@ const Header = ({img, isOnline, name, description}) => {
                     src={img || "images/bot.jpeg"}
                     size='sm'
                 >
-                    <AvatarBadge boxSize='1em' bg={isOnline? 'green.500': 'tomato'} />
+                    <AvatarBadge boxSize='1em' bg={isOnline ? 'green.500' : 'tomato'} />
                 </Avatar>
                 <Flex
                     flexDirection={"column"}

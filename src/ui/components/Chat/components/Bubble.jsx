@@ -1,66 +1,64 @@
-import { Text, Flex, Button, Avatar } from '@chakra-ui/react'
+import { Text, Flex, Avatar } from '@chakra-ui/react'
+import BubbleOption from './BubbleOption'
 
-const Bubble = ({ text, isRobot, isOption }) => {
+const Bubble = ({ text, isRobot, options, handleOption }) => {
 
     return (
         <>
             {isRobot ?
-                isOption ?
+                <Flex
+                    position={"relative"}
+                    columnGap={"4px"}
+                    my={"1%"}
+                    mx={"2%"}
+                >
+                    <Avatar
+                        name="Hr Bot"
+                        src="images/bot.jpeg"
+                        size='xs'
+                        alignSelf={"end"}
+                        pb={"6px"}
+                    />
                     <Flex
-                        columnGap={"4px"}
-                        my={"1%"}
-                        mx={"2%"}
+                        flexDirection={"column"}
+                        borderRadius={"16px"}
+                        border={"1px solid #BEE3F8"}
+                        maxWidth={"45%"}
                     >
-                        <Button
-                            size={"xs"}
-                            colorScheme='blue'
-                            variant='outline'
-                            borderRadius={"16px"}
-                            width={"100%"}
-                            p={"8px"}
-                        >
-                            {text}
-                        </Button>
-                    </Flex>
-                    :
-                    <Flex
-                        columnGap={"4px"}
-                        my={"1%"}
-                        mx={"2%"}
-                    >
-                        <Avatar
-                            name="Hr Bot"
-                            src="images/bot.jpeg"
-                            size='xs'
-                            alignSelf={"end"}
-                            pb={"6px"}
-                        />
                         <Text
                             as={"span"}
-                            py={"3px"}
-                            px={"10px"}
+                            py={["3px"]}
+                            px={["10px"]}
                             variant={"robot"}
                             background={"transparent"}
                             color={"RGBA(0, 0, 0, 0.80)"}
-                            borderRadius={"16px"}
                             alignSelf={"start"}
-                            maxWidth={"45%"}
-                            border={"1px solid #BEE3F8"}
                             fontWeight={"200"}
                             fontSize={"14px"}
                         >
                             {text}
                         </Text>
+                        <Flex
+                            flexDirection={"column"}
+                            pt={["3px"]}
+                            pb={["6px"]}
+                            px={["10px"]}
+                            rowGap={["5px"]}
+                        >
+                            {
+                                options?.map((option, idx) => (
+                                    <BubbleOption key={idx} text={option} handleOption={handleOption} />
+                                )
+                                )
+                            }
+                        </Flex>
                     </Flex>
-
-
-
-
+                </Flex>
                 :
                 <Flex
                     flexDirection={"column"}
                     my={"1%"}
-                    mx={"2%"}
+                    mx={"7%"}
                 >
                     <Text
                         as={"span"}
@@ -71,7 +69,7 @@ const Bubble = ({ text, isRobot, isOption }) => {
                         color={"RGBA(0, 0, 0, 0.80)"}
                         borderRadius={"16px"}
                         alignSelf={"end"}
-                        maxWidth={"40%"}
+                        maxWidth={"45%"}
                         fontWeight={"200"}
                         fontSize={"14px"}
                     >
