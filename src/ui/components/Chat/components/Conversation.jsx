@@ -20,11 +20,11 @@ const Conversation = ({ messageList, handleOption }) => {
         <SCConversation className="invisible-scrollbar">
             <Box
                 position={"relative"}
-                mb={"16%"}
+                mt={"15%"}
+                mb={["16%","10%"]}
                 overflowY={"scroll"}
                 overflowX={"hidden"}
                 width={"100%"}
-                mt={"15%"}
                 scrollBehavior={"smooth"}
             >
                 {

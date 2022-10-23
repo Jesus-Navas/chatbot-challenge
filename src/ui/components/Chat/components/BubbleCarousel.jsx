@@ -12,6 +12,7 @@ const BubbleCarousel = ({ img, title, text }) => {
             <Flex
                 flexDirection={"column"}
                 width={"60%"}
+                maxWidth={["unset","150px"]}
                 border={"1px solid #BEE3F8"}
                 borderRadius={"16px"}
             >
@@ -21,30 +22,32 @@ const BubbleCarousel = ({ img, title, text }) => {
                     src={img}
                     alt={title}
                     p={"5%"}
-
                 />
                 <Text
                     as="h3"
-                    variant="title"
+                    variant="carousel_title"
                     textAlign={"left"}
-                    fontWeight={"800"}
-                    color={"RGBA(0, 0, 0, 0.80)"}
                     px={"5%"}
                     pt={"5%"}
                 >
                     {title}
                 </Text>
                 <Text
-                    fontSize={"14px"}
-                    variant="description"
-                    color={"gray.500"}
+                    variant="carousel_description"
                     minHeight={["104px"]}
                     px={"5%"}
+                    py={"5%"}
                 >
                     {text}
                 </Text>
-                <Button alignSelf={"center"} my={"5%"} colorScheme='blue'
-                    borderRadius={"16px"} size={"sm"} width={"90%"}>
+                <Button 
+                    alignSelf={"center"} 
+                    mb={"5%"} 
+                    colorScheme='blue'
+                    borderRadius={"16px"} 
+                    size={"sm"} 
+                    width={"90%"}
+                >
                     Más información
                 </Button>
             </Flex>

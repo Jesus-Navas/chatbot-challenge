@@ -19,7 +19,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
             zIndex={"2"}
             bottom={"0"}
             pt={"2%"}
-            bgColor={"#fcfeff"}
+            bgColor={"white"}
             as="form"
             pb={"3%"}
             px={"2%"}
@@ -39,10 +39,9 @@ const MessageInput = ({ handleInput, messageRef }) => {
                             <Text
                                 as={"button"}
                                 type="submit"
+                                variant={"message_input"}
                                 bgColor={"transparent"}
                                 mr={"70%"}
-                                fontWeight={"600"}
-                                color={"#3182CE"}
                             >
                                 Enviar
                             </Text>

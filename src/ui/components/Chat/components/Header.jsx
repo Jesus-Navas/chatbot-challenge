@@ -35,16 +35,12 @@ const Header = ({ img, isOnline, name, description }) => {
                     mt={"10%"}
                 >
                     <Text
-                        fontSize={"0.6rem"}
-                        fontWeight={"600"}
-                        lineHeight={"10px"}
+                        variant={"bot_name"}
                     >
                         {name || "HR BOT"}
                     </Text>
                     <Text
-                        fontSize={"0.6rem"}
-                        fontWeight={"100"}
-                        color={"gray.500"}
+                        variant={"bot_description"}
                     >
                         {description || "Asistente virtual"}
                     </Text>

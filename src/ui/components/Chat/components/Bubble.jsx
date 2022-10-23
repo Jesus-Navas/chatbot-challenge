@@ -23,18 +23,15 @@ const Bubble = ({ text, isRobot, options, handleOption }) => {
                         flexDirection={"column"}
                         borderRadius={"16px"}
                         border={"1px solid #BEE3F8"}
-                        maxWidth={"45%"}
+                        maxWidth={["45%","30%"]}
                     >
                         <Text
                             as={"span"}
-                            py={["3px"]}
+                            py={["4%"]}
                             px={["10px"]}
-                            variant={"robot"}
+                            variant={"bubble"}
                             background={"transparent"}
-                            color={"RGBA(0, 0, 0, 0.80)"}
                             alignSelf={"start"}
-                            fontWeight={"200"}
-                            fontSize={"14px"}
                         >
                             {text}
                         </Text>
@@ -62,16 +59,13 @@ const Bubble = ({ text, isRobot, options, handleOption }) => {
                 >
                     <Text
                         as={"span"}
-                        py={"3px"}
+                        py={["2%"]}
                         px={"10px"}
-                        variant={"user"}
+                        variant={"bubble"}
                         background={"#BEE3F8"}
-                        color={"RGBA(0, 0, 0, 0.80)"}
                         borderRadius={"16px"}
                         alignSelf={"end"}
-                        maxWidth={"45%"}
-                        fontWeight={"200"}
-                        fontSize={"14px"}
+                        maxWidth={["45%","30%"]}
                     >
                         {text}
                     </Text>

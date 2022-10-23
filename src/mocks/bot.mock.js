@@ -7,7 +7,7 @@ export const botMessages = [
         options: ["Vacantes", "Productos"]
     },
     {
-        text: "A mi no me mires, solo soy un robot jiji. Selecciona una de las opciones:",
+        text: "Selecciona una de las opciones:",
         isRobot: true,
         isCarousel: false,
         isOption: true,
