@@ -15,13 +15,12 @@ const MessageInput = ({ handleInput, messageRef }) => {
 
     return (
         <FormControl
-            display={["flex", "none"]}
             position={["fixed"]}
-            zIndex={"5"}
+            zIndex={2}
             width={["100%"]}
             bottom={["0", "620"]}
             pt={"2%"}
-            bgColor={"white_robot"}
+            bgColor={"light_blue"}
             as="form"
             pb={"3%"}
             px={"2%"}
