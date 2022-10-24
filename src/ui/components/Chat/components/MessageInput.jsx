@@ -16,11 +16,9 @@ const MessageInput = ({ handleInput, messageRef }) => {
     return (
         <FormControl
             position={["fixed"]}
-            zIndex={2}
             width={["100%"]}
             bottom={["0", "620"]}
             pt={"2%"}
-            bgColor={"light_blue"}
             as="form"
             pb={"3%"}
             px={"2%"}
@@ -35,6 +33,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
                     pr='4.5rem'
                     borderRadius={"16px"}
                     border={"1px solid #BEE3F8"}
+                    color={"black"}
                 />
                 {showButton &&
                     <ScaleFade initialScale={0.9} in={true}>
