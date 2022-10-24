@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Flex, Image, Text, Button } from '@chakra-ui/react'
 
 
