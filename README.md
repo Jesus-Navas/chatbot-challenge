@@ -17,7 +17,7 @@ Open a terminal to run the client (will run on http://localhost:3000/ by default
     yarn dev
 ```
 ## Next steps
-
+- Desktop version
 - Light and dark mode experience
 - Web storage
 - Increase component reusability
