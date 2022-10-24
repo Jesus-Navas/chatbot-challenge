@@ -5,8 +5,8 @@ import { Text } from "./components/text.theme"
 
 const theme = extendTheme({
     config: {
-        initialColorMode: "dark",
-        useSystemColorMode: true,
+        initialColorMode: "true",
+        useSystemColorMode: false,
     },
     colors,
     fonts: {
@@ -16,7 +16,7 @@ const theme = extendTheme({
     styles: {
         global: () => ({
             "html, body": {
-                bgColor:"white",
+                bgColor: "white",
                 overflowX: "hidden",
                 maxWidth: "100vw",
                 scrollBehavior: "smooth"
