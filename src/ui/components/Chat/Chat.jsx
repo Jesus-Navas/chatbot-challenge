@@ -30,7 +30,7 @@ const Chat = () => {
     return (
         <Box
             as='section'
-    
+            position={"relative"}
         >
             <Header isOnline />
             <Conversation messageList={chat} handleOption={handleClick} />
