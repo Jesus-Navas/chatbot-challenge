@@ -1,10 +1,12 @@
+import Link from 'next/link'
 import { Flex, Image, Text, Button } from '@chakra-ui/react'
 
 
 const BubbleCarousel = ({ img, title, text }) => {
     return (
         <Flex
-            py={"5%"}
+            pt={"5%"}
+            pb={"2%"}
             position={"relative"}
             justifyContent={"center"}
             className="keen-slider__slide"
@@ -12,7 +14,7 @@ const BubbleCarousel = ({ img, title, text }) => {
             <Flex
                 flexDirection={"column"}
                 width={"60%"}
-                maxWidth={["unset","150px"]}
+                maxWidth={["unset", "150px"]}
                 border={"1px solid #BEE3F8"}
                 borderRadius={"16px"}
             >
@@ -40,16 +42,22 @@ const BubbleCarousel = ({ img, title, text }) => {
                 >
                     {text}
                 </Text>
-                <Button 
-                    alignSelf={"center"} 
-                    mb={"5%"} 
+
+                <Button
+                    as="a"
+                    target={"_blank"}
+                    rel="noopener noreferrer"
+                    href={"https://github.com/Jesus-Navas"}
+                    alignSelf={"center"}
+                    mb={"5%"}
                     colorScheme='blue'
-                    borderRadius={"16px"} 
-                    size={"sm"} 
+                    borderRadius={"16px"}
+                    size={"sm"}
                     width={"90%"}
                 >
                     Más información
                 </Button>
+
             </Flex>
         </Flex>
     )

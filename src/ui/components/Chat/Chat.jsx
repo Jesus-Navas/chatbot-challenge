@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
-import styled from "@emotion/styled"
+import { Box, Text } from '@chakra-ui/react'
 import Header from './components/Header'
 import MessageInput from './components/MessageInput'
 import Conversation from './components/Conversation'
@@ -28,23 +28,33 @@ const Chat = () => {
     }
 
     return (
-        <SCChat
-            className="invisible-scrollbar"
-            as='section'
-            position={"relative"}
-        >
-            <Header isOnline />
-            <Conversation messageList={chat} handleOption={handleClick} />
-            <MessageInput messageRef={messageRef} handleInput={handleInput} />
-        </SCChat>
+        <>
+            <Box
+                as='section'
+                position={"relative"}
+                display={["block", "none"]}
+            >
+                <Header isOnline />
+                <Conversation messageList={chat} handleOption={handleClick} />
+                <MessageInput messageRef={messageRef} handleInput={handleInput} />
+            </Box>
+
+            <Box
+                as='section'
+                position={"relative"}
+                display={["none", "block"]}
+            >
+                <Text
+                    as="h1"
+                    fontSize={"3vw"}
+                    textAlign={"center"}
+                    mt={"50%"}
+                >
+                    PAGINA WEB DISEÑADA PARA VERSIÓN MOVIL
+                </Text>
+            </Box>
+        </>
     )
 }
 
 export default Chat
-
-const SCChat = styled.div`
-
-    .invisible-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-`

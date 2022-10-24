@@ -23,7 +23,7 @@ const Bubble = ({ text, isRobot, options, handleOption }) => {
                         flexDirection={"column"}
                         borderRadius={"16px"}
                         border={"1px solid #BEE3F8"}
-                        maxWidth={["45%","30%"]}
+                        maxWidth={["45%", "20%"]}
                     >
                         <Text
                             as={"span"}
@@ -56,6 +56,7 @@ const Bubble = ({ text, isRobot, options, handleOption }) => {
                     flexDirection={"column"}
                     my={"1%"}
                     mx={"7%"}
+
                 >
                     <Text
                         as={"span"}
@@ -65,7 +66,8 @@ const Bubble = ({ text, isRobot, options, handleOption }) => {
                         background={"#BEE3F8"}
                         borderRadius={"16px"}
                         alignSelf={"end"}
-                        maxWidth={["45%","30%"]}
+                        maxWidth={["45%", "30%"]}
+
                     >
                         {text}
                     </Text>

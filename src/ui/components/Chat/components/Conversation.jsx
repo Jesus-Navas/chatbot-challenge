@@ -10,21 +10,20 @@ const Conversation = ({ messageList, handleOption }) => {
     const lastMessageRef = useRef()
 
     useEffect(() => {
-      if(lastMessageRef.current){
-        lastMessageRef.current.scrollIntoView({smooth:true})
-      }
+        if (lastMessageRef.current) {
+            lastMessageRef.current.scrollIntoView({ smooth: true })
+        }
 
     })
-    
+
     return (
-        <SCConversation className="invisible-scrollbar">
             <Box
                 position={"relative"}
-                mt={"15%"}
-                mb={["16%","10%"]}
+                mt={["15%","0"]}
+                mb={["16%", "10%"]}
                 overflowY={"scroll"}
                 overflowX={"hidden"}
-                width={"100%"}
+                width={["100%"]}
                 scrollBehavior={"smooth"}
             >
                 {
@@ -53,15 +52,8 @@ const Conversation = ({ messageList, handleOption }) => {
                     })
                 }
             </Box>
-        </SCConversation>
     )
 }
 
 export default Conversation
 
-const SCConversation = styled.div`
-
-    .invisible-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-`

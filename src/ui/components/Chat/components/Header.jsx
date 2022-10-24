@@ -6,11 +6,11 @@ const Header = ({ img, isOnline, name, description }) => {
     //TODO: MODAL
     return (
         <Flex
-            position={"fixed"}
+            display={["flex", "none"]}
+            position={["fixed"]}
             zIndex={"2"}
             top={"0"}
-            width={"100%"}
-            as={"header"}
+            width={["100%", "40%"]}
             alignItems={"center"}
             justifyContent={"space-between"}
             pl={"6px"}

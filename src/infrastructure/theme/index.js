@@ -1,9 +1,14 @@
 import { extendTheme } from "@chakra-ui/react"
 import { breakpoints } from "./foundations/breakpoints.theme"
+import { colors } from "./foundations/colors.theme"
 import { Text } from "./components/text.theme"
 
 const theme = extendTheme({
-    initialColorMode: "light",
+    config: {
+        initialColorMode: "dark",
+        useSystemColorMode: true,
+    },
+    colors,
     fonts: {
         heading: "FiraSans-Regular",
         body: "FiraSans-Regular"
@@ -11,7 +16,7 @@ const theme = extendTheme({
     styles: {
         global: () => ({
             "html, body": {
-                bgColor: "#fcfeff",
+                bgColor:"white",
                 overflowX: "hidden",
                 maxWidth: "100vw",
                 scrollBehavior: "smooth"
