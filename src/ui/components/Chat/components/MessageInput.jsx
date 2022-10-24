@@ -20,7 +20,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
             width={["100%"]}
             bottom={["0", "620"]}
             pt={"2%"}
-            bgColor={"light_blue"}
+            bgColor={"white_robot"}
             as="form"
             pb={"3%"}
             px={"2%"}
@@ -33,6 +33,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
                     placeholder='Escribe un mensaje...'
                     pr='4.5rem'
                     borderRadius={"16px"}
+                    border={"1px solid #BEE3F8"}
                 />
                 {showButton &&
                     <ScaleFade initialScale={0.9} in={true}>
