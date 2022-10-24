@@ -17,9 +17,9 @@ const MessageInput = ({ handleInput, messageRef }) => {
         <FormControl
             display={["flex", "none"]}
             position={["fixed"]}
-            zIndex={"2"}
+            zIndex={"5"}
             width={["100%"]}
-            bottom={["0","620"]}
+            bottom={["0", "620"]}
             pt={"2%"}
             bgColor={"white_robot"}
             as="form"
