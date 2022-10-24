@@ -20,7 +20,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
             width={["100%"]}
             bottom={["0", "620"]}
             pt={"2%"}
-            bgColor={"white_robot"}
+            bgColor={"light_blue"}
             as="form"
             pb={"3%"}
             px={"2%"}
@@ -29,6 +29,7 @@ const MessageInput = ({ handleInput, messageRef }) => {
         >
             <InputGroup size='md'>
                 <Input
+                    zIndex={5}
                     ref={messageRef}
                     placeholder='Escribe un mensaje...'
                     pr='4.5rem'
