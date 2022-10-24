@@ -3,7 +3,6 @@ export const Text = {
         fontFamily: "FiraSans-Regular",
         fontWeight: "100",
         fontSize: ["14px", "14px", "20px", "20px"],
-        lineHeight: ["14px", "14px", "20px", "20px"],
         color: "black_robot",
     },
     variants: {
@@ -32,7 +31,7 @@ export const Text = {
         },
         bubble: {
             fontSize: ["12px", "18px"],
-            
+
         }
     }
 }

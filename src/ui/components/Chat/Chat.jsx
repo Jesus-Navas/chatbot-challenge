@@ -43,12 +43,14 @@ const Chat = () => {
                 as='section'
                 position={"relative"}
                 display={["none", "block"]}
+                height={"100vh"}
             >
                 <Text
                     as="h1"
                     fontSize={"2vw"}
                     textAlign={"center"}
                     mt={"30%"}
+                    height={"50vh"}
                 >
                     PAGINA WEB DISEÑADA PARA VERSIÓN MOVIL
                 </Text>
