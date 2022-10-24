@@ -48,7 +48,7 @@ const Chat = () => {
                     as="h1"
                     fontSize={"3vw"}
                     textAlign={"center"}
-                    mt={"50%"}
+                    mt={"30%"}
                 >
                     PAGINA WEB DISEÑADA PARA VERSIÓN MOVIL
                 </Text>
