@@ -28,15 +28,35 @@ const Chat = () => {
     }
 
     return (
-        <Box
-            as='section'
-            position={"relative"}
-        >
-            <Header isOnline />
-            <Conversation messageList={chat} handleOption={handleClick} />
-            <MessageInput messageRef={messageRef} handleInput={handleInput} />
-        </Box>
+        <>
+            <Box
+                as='section'
+                position={"relative"}
+                display={["block", "none"]}
+            >
+                <Header isOnline />
+                <Conversation messageList={chat} handleOption={handleClick} />
+                <MessageInput messageRef={messageRef} handleInput={handleInput} />
+            </Box>
+
+            <Box
+                as='section'
+                position={"relative"}
+                display={["none", "block"]}
+                height={"100vh"}
+            >
+                <Text
+                    as="h1"
+                    textAlign={"center"}
+                    mt={"30%"}
+                    fontSize={"40px"}
+                    fontWeight={"400"}
+                >
+                    PAGINA WEB DISEÑADA EN VERSION MÓVIL
+                </Text>
+
+            </Box>
+        </>
     )
 }
-
 export default Chat

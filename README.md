@@ -5,9 +5,6 @@ Technical Challenge using:
 - Chakra UI
 - Styled Components
 
-
-You can check a live version following this link: [Deployed Chat]()
-
 ## How to run
 This is an [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
